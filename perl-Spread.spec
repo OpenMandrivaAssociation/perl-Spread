@@ -9,7 +9,6 @@ Source0:	http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/Spread-3.17.3-%{versi
 BuildRequires:	perl-devel
 BuildRequires:	spread-devel
 BuildRequires:	chrpath
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Spread is a Perl module that conveniently wraps the Spread C libraries provided
