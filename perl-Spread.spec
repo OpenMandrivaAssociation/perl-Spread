@@ -7,7 +7,7 @@ Group:		Development/Perl
 URL:		http://www.cpan.org
 Source0:	http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/Spread-3.17.3-%{version}.tar.bz2
 BuildRequires:	perl-devel
-BuildRequires:	spread-devel
+BuildRequires:	libspread-devel
 BuildRequires:	chrpath
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
