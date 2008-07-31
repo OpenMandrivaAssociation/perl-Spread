@@ -1,7 +1,7 @@
 Summary:	Perl extension for the Spread group communication system 
 Name:		perl-Spread
 Version:	1.07
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://www.cpan.org
