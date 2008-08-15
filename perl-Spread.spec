@@ -1,15 +1,16 @@
+%define module   Spread
+
+Name:		perl-%{module}
+Version:	3.17.4.1
+Release:	%mkrel 1
 Summary:	Perl extension for the Spread group communication system 
-Name:		perl-Spread
-Version:	1.07
-Release:	%mkrel 6
 License:	GPL or Artistic
 Group:		Development/Perl
-URL:		http://www.cpan.org
-Source0:	http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/Spread-3.17.3-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{module}
+Source0:	http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/Spread-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	libspread-devel
-BuildRequires:	chrpath
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Spread is a Perl module that conveniently wraps the Spread C libraries provided
@@ -20,8 +21,7 @@ reliable multicasting information between applications as well as providing
 many more complicate assurances.
 
 %prep
-
-%setup -q -n Spread-3.17.3-%{version} 
+%setup -q -n %{module}-%{version} 
 
 # fix paths
 perl -pi -e "s|^\\\$SPLIB_LIB.*|\\\$SPLIB_LIB=\'-L%{_libdir}\'\;|g" Makefile.PL
@@ -41,11 +41,7 @@ make test
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
-
-# nuke rpath
-find %{buildroot} -name "*.so" | xargs chrpath -d
 
 %clean 
 rm -rf %{buildroot}
@@ -53,8 +49,8 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc README
-%{perl_vendorlib}/*/auto/Spread/*
-%{perl_vendorlib}/*/*.pm
+%{perl_vendorarch}/auto/Spread
+%{perl_vendorarch}/Spread.pm
 %{_mandir}/*/*
 
 
