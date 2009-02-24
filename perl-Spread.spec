@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	3.17.4.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	Perl extension for the Spread group communication system 
 License:	GPL or Artistic
 Group:		Development/Perl
