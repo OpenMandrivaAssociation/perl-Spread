@@ -1,5 +1,5 @@
 %define upstream_name    Spread
-%define upstream_version 3.17.4.2
+%define upstream_version 3.17.4.3
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -10,7 +10,6 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/%{upstream_name}-%{upstream_version}.tar.gz
-Patch0:     Spread-3.17.4.2-fix-security-format.patch
 
 BuildRequires:	perl-devel
 BuildRequires:	libspread-devel
@@ -26,7 +25,6 @@ many more complicate assurances.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch0 -b .sec-format
 
 # fix paths
 perl -pi -e "s|^\\\$SPLIB_LIB.*|\\\$SPLIB_LIB=\'-L%{_libdir}\'\;|g" Makefile.PL
