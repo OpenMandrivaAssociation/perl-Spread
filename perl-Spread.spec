@@ -1,13 +1,17 @@
-%define module   Spread
+%define upstream_name    Spread
+%define upstream_version 3.17.4.2
 
-Name:		perl-%{module}
-Version:	3.17.4.1
-Release:	%mkrel 2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl extension for the Spread group communication system 
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}
-Source0:	http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/Spread-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/%{upstream_name}-%{upstream_version}.tar.gz
+Patch0:     Spread-3.17.4.2-fix-security-format.patch
+
 BuildRequires:	perl-devel
 BuildRequires:	libspread-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
@@ -21,7 +25,8 @@ reliable multicasting information between applications as well as providing
 many more complicate assurances.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
+%patch0 -b .sec-format
 
 # fix paths
 perl -pi -e "s|^\\\$SPLIB_LIB.*|\\\$SPLIB_LIB=\'-L%{_libdir}\'\;|g" Makefile.PL
@@ -52,5 +57,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/Spread
 %{perl_vendorarch}/Spread.pm
 %{_mandir}/*/*
-
-
