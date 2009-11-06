@@ -1,5 +1,5 @@
 %define upstream_name    Spread
-%define upstream_version 3.17.4.3
+%define upstream_version 3.17.4.4
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
