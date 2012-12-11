@@ -55,3 +55,62 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/Spread
 %{perl_vendorarch}/Spread.pm
 %{_mandir}/*/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 3.17.4.4-3
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 3.17.4.4-2mdv2011.0
++ Revision: 556146
+- rebuild for perl 5.12
+
+* Fri Nov 06 2009 Jérôme Quelin <jquelin@mandriva.org> 3.17.4.4-1mdv2010.1
++ Revision: 460775
+- update to 3.17.4.4
+
+* Tue Aug 04 2009 Jérôme Quelin <jquelin@mandriva.org> 3.17.4.3-1mdv2010.0
++ Revision: 409060
+- update to 3.17.4.3
+
+* Tue Aug 04 2009 Jérôme Quelin <jquelin@mandriva.org> 3.17.4.2-1mdv2010.0
++ Revision: 408857
+- update to 3.17.4.2
+
+* Tue Feb 24 2009 Guillaume Rousse <guillomovitch@mandriva.org> 3.17.4.1-2mdv2009.1
++ Revision: 344580
+- rebuild
+
+* Fri Aug 15 2008 Guillaume Rousse <guillomovitch@mandriva.org> 3.17.4.1-1mdv2009.0
++ Revision: 272264
+- new version
+
+* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.07-6mdv2009.0
++ Revision: 258361
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 1.07-5mdv2009.0
++ Revision: 246423
+- rebuild
+
+* Tue Jan 15 2008 Thierry Vignaud <tv@mandriva.org> 1.07-3mdv2008.1
++ Revision: 152760
+- fix libspread-devel BR
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+
+* Fri Jan 26 2007 Oden Eriksson <oeriksson@mandriva.com> 1.07-2mdv2007.0
++ Revision: 113870
+- Import perl-Spread
+
+* Fri Jan 26 2007 Oden Eriksson <oeriksson@mandriva.com> 1.07-2mdv2007.1
+- rebuild
+
+* Tue Dec 20 2005 Oden Eriksson <oeriksson@mandriva.com> 1.07-1mdk
+- initial Mandriva package
+
