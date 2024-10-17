@@ -8,7 +8,7 @@ Release:	5
 Summary:	Perl extension for the Spread group communication system 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
