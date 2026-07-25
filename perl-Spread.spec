@@ -1,15 +1,15 @@
 %define upstream_name    Spread
-%define upstream_version 3.17.4.4
+%define upstream_version v3.17.4.4
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	5
+Version:    %{upstream_version}
+Release:	1
 
 Summary:	Perl extension for the Spread group communication system 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Spread
+Source0:    https://cpan.metacpan.org/authors/id/J/JE/JESUS/Spread-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
