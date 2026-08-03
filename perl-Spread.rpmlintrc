@@ -1,2 +1,0 @@
-addFilter("invalid-license")
-addFilter("unused-rpmlintrc-filter")
