@@ -1,3 +1,2 @@
-addFilter("superfluous-%clean-section")
-addFilter("no-%check-section")
 addFilter("invalid-license")
+addFilter("unused-rpmlintrc-filter")
