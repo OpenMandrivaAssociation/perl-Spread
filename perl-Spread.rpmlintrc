@@ -1,0 +1,3 @@
+addFilter("superfluous-%clean-section")
+addFilter("no-%check-section")
+addFilter("invalid-license")

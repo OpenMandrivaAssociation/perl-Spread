@@ -3,13 +3,14 @@
 
 Name:       perl-%{upstream_name}
 Version:    %{upstream_version}
-Release:	6
+Release:	7
 
 Summary:	Perl extension for the Spread group communication system 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Spread
 Source0:    https://cpan.metacpan.org/authors/id/J/JE/JESUS/Spread-%{upstream_version}.tar.gz
+Source1:	perl-Spread.rpmlintrc
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -46,9 +47,6 @@ make test
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-
-%clean 
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
