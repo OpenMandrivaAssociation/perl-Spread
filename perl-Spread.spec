@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %{upstream_version}
-Release:	1
+Release:	6
 
 Summary:	Perl extension for the Spread group communication system 
 License:	GPL+ or Artistic
